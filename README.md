@@ -26,7 +26,7 @@ Add on: Lamp
 
 ## Steps 
 
-# Setting up Raspberry Pi:
+### Step 1: Setting up Raspberry Pi
 •	Insert the SD card with Raspbian OS into your Raspberry Pi.
 •	Connect the monitor, keyboard, and mouse to your Raspberry Pi.
 •	Power on the Raspberry Pi and follow the on-screen prompts to complete the setup process.
@@ -34,7 +34,7 @@ Add on: Lamp
 
 
 
-# Step 2: Installing Dependencies:
+### Step 2: Installing Dependencies
 •	Connect your Raspberry Pi to the internet.
 •	Open the terminal on your Raspberry Pi.
 •	Install necessary dependencies by running the following terminal commands:
@@ -52,9 +52,9 @@ pip install openai (pip install openai==0.28)
 pip install SpeechRecognition
 pip install pyttsx3
 pip install gtts
-```bash
+```bash//  
 
-# Step 3: Obtaining OpenAI API Keys:
+### Step 3: Obtaining OpenAI API Keys
 •	Sign up to  OpenAI account.
 •	Navigate to the API keys section and generate new API keys if you haven't already
 •	Copy the API key and save for later use in your Python script.
