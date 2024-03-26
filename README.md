@@ -40,18 +40,19 @@ Add on: Lamp
 •	Install necessary dependencies by running the following terminal commands:
 
 ```bash
-$ sudo apt update 
-$ sudo apt upgrade 
-$ python3 -m pip install python-dotenv
-$ sudo apt-get install portaudio19-dev
-$ pip install pyaudio
-$ sudo apt install python3-pyaudio flac python3-espeak espeak python3-dotenv
-$ pip uninstall dotenv   (not required)
-$ pip install python-dotenv   (not required)
-$ pip install openai (pip install openai==0.28)
-$ pip install SpeechRecognition
-$ pip install pyttsx3
-$ pip install gtts
+sudo apt update 
+sudo apt upgrade 
+python3 -m pip install python-dotenv
+sudo apt-get install portaudio19-dev
+pip install pyaudio
+sudo apt install python3-pyaudio flac python3-espeak espeak python3-dotenv
+pip uninstall dotenv   (not required)
+pip install python-dotenv   (not required)
+pip install openai (pip install openai==0.28)
+pip install SpeechRecognition
+pip install pyttsx3
+pip install gtts
+```bash
 
 # Step 3: Obtaining OpenAI API Keys:
 •	Sign up to  OpenAI account.
