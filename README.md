@@ -1,14 +1,14 @@
 # Raspberry-Pi-Voice-Assistant-Robot
 This is a lab experiment designed as part of TECHIN 515 - Hardware Software Lab 2.
 
-# Objective
+## Objective
 In this lab, we will learn how to develop a voice assistant robot powered by ChatGPT, a state-of-the-art language model developed by OpenAI. We will configure a Raspberry Pi with the necessary hardware components and utilize OpenAI's Application programming interface (API) to enable conversational interactions with your robot... (DETAILS)
 Theory on Text to Speech, and Speech to Text...
 
 API is a way for two or more computer programs or components to communicate with each other...
 
 
-# Hardware: 
+## Hardware
 1.	Raspberry Pi 3/4B 
 2.	Monitor
 3.	Keyboard
@@ -20,11 +20,13 @@ API is a way for two or more computer programs or components to communicate with
 Add on: Relay modules
 Add on: Lamp
 
-# Software: 
+## Software: 
 1.	Raspbian Operating System: Legacy bullseye 64-bit with desktop environment
 2.	Openai platform to generate API keys
 
-# Step 1: Setting up Raspberry Pi:
+## Steps 
+
+# Setting up Raspberry Pi:
 •	Insert the SD card with Raspbian OS into your Raspberry Pi.
 •	Connect the monitor, keyboard, and mouse to your Raspberry Pi.
 •	Power on the Raspberry Pi and follow the on-screen prompts to complete the setup process.
@@ -37,6 +39,7 @@ Add on: Lamp
 •	Open the terminal on your Raspberry Pi.
 •	Install necessary dependencies by running the following terminal commands:
 
+```bash
 $ sudo apt update 
 $ sudo apt upgrade 
 $ python3 -m pip install python-dotenv
