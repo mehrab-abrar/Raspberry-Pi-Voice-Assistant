@@ -52,7 +52,7 @@ pip install openai (pip install openai==0.28)
 pip install SpeechRecognition
 pip install pyttsx3
 pip install gtts
-```bash//  
+```
 
 ### Step 3: Obtaining OpenAI API Keys
 •	Sign up to  OpenAI account.
