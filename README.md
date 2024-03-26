@@ -56,10 +56,10 @@ pip install gtts
 
 ### Step 3: Obtaining OpenAI API Keys
 •	Sign up to  OpenAI account.
-•	Navigate to the API keys section and generate new API keys if you haven't already
+•	Navigate to the API keys section and generate new API keys if you haven't already.
 •	Copy the API key and save for later use in your Python script.
 
-# Step 4: Writing Python Script:
+### Step 4: Writing Python Script
 •	Create a new Python script on your Raspberry Pi using your preferred text editor.
 •	Write a Python script that utilizes the OpenAI platform API keys for interacting with ChatGPT.
 •	Use libraries such as openai and pyaudio to handle text-to-speech and speech recognition functionalities.
