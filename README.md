@@ -42,7 +42,7 @@ Add on: Lamp
 ```bash
 sudo apt update 
 sudo apt upgrade 
-python3 -m pip install python-dotenv
+sudo apt install python3-dotenv
 sudo apt-get install portaudio19-dev
 pip install pyaudio
 sudo apt install python3-pyaudio flac python3-espeak espeak python3-dotenv
