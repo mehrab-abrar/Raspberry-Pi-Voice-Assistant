@@ -54,7 +54,7 @@ python -m venv env
 This will create a virtual environment in the voice_assistant directory. To activate your virtual environment, we use the following command:
 
 ```bash
-$ source env/bin/activate
+source env/bin/activate
 ```
 
 Now install necessary dependencies by running the following terminal commands:
