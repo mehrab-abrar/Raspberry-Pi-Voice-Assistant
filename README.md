@@ -37,11 +37,23 @@ Add on: Lamp
 ### Step 2: Installing Dependencies
 •	Connect your Raspberry Pi to the internet.
 •	Open the terminal on your Raspberry Pi.
-•	Install necessary dependencies by running the following terminal commands:
 
+Lets check for updates and upgrades first.
 ```bash
 sudo apt update 
-sudo apt upgrade 
+sudo apt upgrade
+```
+
+We will create a separate directory for this project and install the dependencies in virtual environment. 
+
+```bash
+mkdir voice_assistant
+cd voice_assistant
+python -m venv env
+```
+This will create a virtual environment in the voice_assistant directory. Now install necessary dependencies by running the following terminal commands:
+
+```bash
 sudo apt install python3-dotenv
 sudo apt-get install portaudio19-dev
 pip install pyaudio
