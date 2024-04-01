@@ -51,7 +51,13 @@ mkdir voice_assistant
 cd voice_assistant
 python -m venv env
 ```
-This will create a virtual environment in the voice_assistant directory. Now install necessary dependencies by running the following terminal commands:
+This will create a virtual environment in the voice_assistant directory. To activate your virtual environment, we use the following command:
+
+```bash
+$ source env/bin/activate
+```
+
+Now install necessary dependencies by running the following terminal commands:
 
 ```bash
 sudo apt install python3-dotenv
