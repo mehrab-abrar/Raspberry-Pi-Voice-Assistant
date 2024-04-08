@@ -46,20 +46,21 @@ sudo apt update
 sudo apt upgrade
 ```
 
-* We will create a separate directory for this project and install the dependencies in virtual environment. 
+We will create a separate directory for this project and install the dependencies in virtual environment. 
 
 ```bash
 mkdir voice_assistant
 cd voice_assistant
 python -m venv env
 ```
-* This will create a virtual environment in the voice_assistant directory. We will use this directory to upload our python codes. To activate your virtual environment, we use the following command:
+
+This will create a virtual environment in the voice_assistant directory. We will use this directory to upload our python codes. To activate your virtual environment, we use the following command:
 
 ```bash
 source env/bin/activate
 ```
 
-Now install necessary dependencies by running the following terminal commands:
+* Now install necessary dependencies by running the following terminal commands:
 
 ```bash
 sudo apt install python3-dotenv
@@ -77,7 +78,7 @@ pip install lgpio
 
 ### Step 3: Change default mode for audio devices 
 
-* Now plug in your USB microphone and USB speaker to the USB ports of the Raspberry Pi. We need to define these two devices as our default audio devices. Open a new terminal and run the following commands:
+Now plug in your USB microphone and USB speaker to the USB ports of the Raspberry Pi. We need to define these two devices as our default audio devices. Open a new terminal and run the following commands:
 
 ```bash
 arecord -l 
