@@ -7,36 +7,38 @@ Theory on Text to Speech, and Speech to Text...
 
 API is a way for two or more computer programs or components to communicate with each other...
 
-
 ## Hardware
-1.	Raspberry Pi 3/4B 
-2.	Monitor
-3.	Keyboard
-4.	Mouse
-6.	Micro SD card 
-7.	USB microphone
-8.	Speaker
-**
-Add on: Relay modules
-Add on: Lamp
+1.	Raspberry Pi 5
+2.	Power adapter for Raspberry Pi (27 Watt recommended)
+3.	HDMI cable and Monitor
+4.	USB Keyboard and mouse
+5.	MicroSD card (16GB or larger recommended)
+8.  Relay Module
+9.  LED
+10. Lamp (Optional)
 
 ## Software: 
-1.	Raspbian Operating System: Legacy bullseye 64-bit with desktop environment
+1.	The Latest Raspbian Operating System: Debian Bookwarm 64-bit with desktop environment
 2.	Openai platform to generate API keys
 
 ## Steps 
 
 ### Step 1: Setting up Raspberry Pi
-•	Insert the SD card with Raspbian OS into your Raspberry Pi.
-•	Connect the monitor, keyboard, and mouse to your Raspberry Pi.
-•	Power on the Raspberry Pi and follow the on-screen prompts to complete the setup process.
 
-
+* Download the Raspberry Pi Imager from the [official Raspberry Pi website](https://www.raspberrypi.com/software/)
+* Insert the MicroSD card into your computer.
+* Open Raspberry Pi Imager and choose your Raspberry Pi hardware device. Select the latest Raspbian OS from the list of available operating systems. We choose the Debian Bookwarm 64-bit with desktop environment. Select your MicroSD card as the storage location.
+* Edit the OS customization settings and add your user name and password of choice
+* Click "Write" and wait for the process to complete.
+* Once done, eject the MicroSD card safely and insert it into your Raspberry Pi.
+* Connect the monitor, keyboard, and mouse to your Raspberry Pi.
+* Plug in the adapter and power on the Raspberry Pi.
 
 
 ### Step 2: Installing Dependencies
-•	Connect your Raspberry Pi to the internet.
-•	Open the terminal on your Raspberry Pi.
+
+* Connect your Raspberry Pi to the internet.
+* Open the terminal on your Raspberry Pi.
 
 Lets check for updates and upgrades first.
 ```bash
@@ -44,14 +46,14 @@ sudo apt update
 sudo apt upgrade
 ```
 
-We will create a separate directory for this project and install the dependencies in virtual environment. 
+* We will create a separate directory for this project and install the dependencies in virtual environment. 
 
 ```bash
 mkdir voice_assistant
 cd voice_assistant
 python -m venv env
 ```
-This will create a virtual environment in the voice_assistant directory. To activate your virtual environment, we use the following command:
+* This will create a virtual environment in the voice_assistant directory. We will use this directory to upload our python codes. To activate your virtual environment, we use the following command:
 
 ```bash
 source env/bin/activate
@@ -73,14 +75,28 @@ pip install gtts
 pip install lgpio
 ```
 
-### Step x: Change default mode for audio devices 
+### Step 3: Change default mode for audio devices 
 
-### Step 3: Obtaining OpenAI API Keys
+* Now plug in your USB microphone and USB speaker to the USB ports of the Raspberry Pi. We need to define these two devices as our default audio devices. Open a new terminal and run the following commands:
+
+```bash
+arecord -l 
+```
+You will be able to see a list of the hardware devices that are connected to your Raspberry Pi. Note the Card Number associated with your USB audio. Now we will change the card number in the default settings.
+
+```bash
+sudo nano /usr/share/alsa/alsa.conf
+```
+This command will take you to the default configuration, scroll down to the default section and change the "defaults.ctl.card 0" and "defaults.pcm.card 0" with your Card Number. 
+
+### Step 4: Obtaining OpenAI API Keys
+
+We will use the OpenAI API to generate a text response. 
 •	Sign up to  OpenAI account.
 •	Navigate to the API keys section and generate new API keys if you haven't already.
 •	Copy the API key and save for later use in your Python script.
 
-### Step 4: Writing Python Script
+### Step 5: Writing Python Script
 •	Create a new Python script on your Raspberry Pi using your preferred text editor.
 •	Write a Python script that utilizes the OpenAI platform API keys for interacting with ChatGPT.
 •	Use libraries such as openai and pyaudio to handle text-to-speech and speech recognition functionalities.
