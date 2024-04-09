@@ -141,7 +141,7 @@ This command will take you to the default configuration, scroll down to the defa
 <img src="https://github.com/mehrab-abrar/Raspberry-Pi-Voice-Assistant-Robot/assets/42034831/9b065dd3-308e-4d1e-bae0-0cb310568186" alt="Screenshot 2024-04-09 030846" width="400">
 
 ### Step 6: Writing and Executing the Python Script
-* Navigate to the voice_assistant directory from file explorer and create a new file named voice_assistant.py. Double click on the file and open it in a text editor. Now copy the voice_assistant_full.py code from here and paste it in the text editor. Make sure to replace the "KEY" with your own API key in the openai.api_key line.
+* Navigate to the voice_assistant directory from file explorer and create a new file named voice_assistant.py. Double click on the file and open it in a text editor. Now copy the **voice_assistant.py** script from here and paste it in the text editor. Make sure to replace the "KEY" with your own API key in the openai.api_key line.
 
 
 <img src="https://github.com/mehrab-abrar/Raspberry-Pi-Voice-Assistant-Robot/assets/42034831/0a5d501d-3cfc-4110-88ff-83e60fe5274d" alt="Screenshot 2024-04-09 040155" width="400">
