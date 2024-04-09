@@ -13,9 +13,8 @@ API is a way for two or more computer programs or components to communicate with
 3.	HDMI cable and Monitor
 4.	USB Keyboard and mouse
 5.	MicroSD card (16GB or larger recommended)
-8.  Relay Module
-9.  LED
-10. Lamp (Optional)
+6.  Relay Module
+7. Lamp (Optional)
 
 ## Software: 
 1.	The Latest Raspbian Operating System: Debian Bookwarm 64-bit with desktop environment
