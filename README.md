@@ -27,12 +27,19 @@ API is a way for two or more computer programs or components to communicate with
 
 * Download the Raspberry Pi Imager from the [official Raspberry Pi website](https://www.raspberrypi.com/software/)
 * Insert the MicroSD card into your computer.
-* Open Raspberry Pi Imager and choose your Raspberry Pi hardware device. Select the latest Raspbian OS from the list of available operating systems. We choose the Debian Bookwarm 64-bit with desktop environment. Select your MicroSD card as the storage location.
-* Edit the OS customization settings and add your user name and password of choice
-* Click "Write" and wait for the process to complete.
-* Once done, eject the MicroSD card safely and insert it into your Raspberry Pi.
+* Open Raspberry Pi Imager and choose your Raspberry Pi 5 hardware device. Select the latest Raspbian OS from the list of available operating systems. We choose the Debian Bookwarm 64-bit with desktop environment. Select your MicroSD card as the storage location.
+* Click "Next" and edit the OS customization settings. Here, add your username and password of choice
+* Continue writing the OS into the MicroSD card and wait for the process to complete. In the meantime, you might want to go to Step 2 and obtain the OpenAI API keys to save some time!
+* Once the OS writing process is completed, eject the MicroSD card safely and insert it into your Raspberry Pi.
 * Connect the monitor, keyboard, and mouse to your Raspberry Pi.
-* Plug in the adapter and power on the Raspberry Pi.
+* Plug in the adapter and power on the Raspberry Pi. Check if you are automatically connected to the WiFi Network. If not, connect to a WiFi manually.
+
+### Step 2: Obtaining OpenAI API Keys
+
+We will use the OpenAI API to generate a text response. 
+•	Sign up to  OpenAI account.
+•	Navigate to the API keys section and generate new API keys if you haven't already.
+•	Copy the API key and save for later use in your Python script.
 
 
 ### Step 2: Installing Dependencies
@@ -60,7 +67,7 @@ This will create a virtual environment in the voice_assistant directory. We will
 source env/bin/activate
 ```
 
-* Now install necessary dependencies by running the following terminal commands:
+* Now install necessary dependencies by running the following terminal commands inside the virtual environment:
 
 ```bash
 sudo apt install python3-dotenv
@@ -88,17 +95,20 @@ You will be able to see a list of the hardware devices that are connected to you
 ```bash
 sudo nano /usr/share/alsa/alsa.conf
 ```
-This command will take you to the default configuration, scroll down to the default section and change the "defaults.ctl.card 0" and "defaults.pcm.card 0" with your Card Number. 
+This command will take you to the default configuration, scroll down to the default section and change the "defaults.ctl.card 0" and "defaults.pcm.card 0" with your Card Number. Now press ctrl + x to save the configuration. Change the modifications and press enter.
 
 ### Step 4: Obtaining OpenAI API Keys
 
 We will use the OpenAI API to generate a text response. 
-•	Sign up to  OpenAI account.
-•	Navigate to the API keys section and generate new API keys if you haven't already.
-•	Copy the API key and save for later use in your Python script.
+*	Sign up to  OpenAI account.
+*	Navigate to the API keys section and generate new API keys if you haven't already.
+*	Copy the API key and save for later use in your Python script.
 
 ### Step 5: Writing Python Script
-•	Create a new Python script on your Raspberry Pi using your preferred text editor.
-•	Write a Python script that utilizes the OpenAI platform API keys for interacting with ChatGPT.
-•	Use libraries such as openai and pyaudio to handle text-to-speech and speech recognition functionalities.
-•	Implement code logic to capture audio input from the microphone, send it to the OpenAI API for processing, and play back the response through the speaker.
+* From the Raspberry Pi icon at the top left, navigate to programming and select Thonny editor. Copy the voice_assistant.py code and paste in the Thonny editor. Save it as voice_assistant.py in the voice_assistant directory. 
+  
+* Write a Python script that utilizes the OpenAI platform API keys for interacting with ChatGPT.
+
+* Use libraries such as openai and pyaudio to handle text-to-speech and speech recognition functionalities.
+
+* Implement code logic to capture audio input from the microphone, send it to the OpenAI API for processing, and play back the response through the speaker.
