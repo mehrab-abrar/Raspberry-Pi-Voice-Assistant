@@ -36,6 +36,7 @@ API is a way for two or more computer programs or components to communicate with
 <img src="https://github.com/mehrab-abrar/Raspberry-Pi-Voice-Assistant-Robot/assets/42034831/50042928-eb72-4cdf-898a-a446e49fd1e3" alt="Screenshot 2024-04-09 003321" width="400">
 
 
+
 <img src="https://github.com/mehrab-abrar/Raspberry-Pi-Voice-Assistant-Robot/assets/42034831/bb608a93-e56f-4842-af73-f65223804da0" alt="Screenshot 2024-04-09 003602" width="400">
 
 
@@ -57,8 +58,19 @@ We will use the OpenAI API to generate a text response.
 
 <img src="https://github.com/mehrab-abrar/Raspberry-Pi-Voice-Assistant-Robot/assets/42034831/42f877a1-b4cc-4717-9657-db2d0c65b3d0" alt="Screenshot 2024-04-09 145345" width="400">
 
+### Step 3: Build the circuit
 
-### Step 2: Installing Dependencies
+This is an easy circuit setup, follow the diagram and connect your Raspberry Pi with the Relay Module.
+
+Connections:
+* Raspberry Pi Pin 4 (5V)       --- Relay Module VCC
+* Raspberry Pi Pin 6 (GND)      --- Relay Module GND
+* Raspberry Pi Pin 12 (GPIO 18) --- Relay Module IN1
+
+<img width="600" alt="relay-pi5-circuit" src="https://github.com/mehrab-abrar/Raspberry-Pi-Voice-Assistant-Robot/assets/42034831/5b048b50-de17-418e-8035-18a890e313ba">
+
+
+### Step 4: Installing Dependencies
 
 * Connect your Raspberry Pi to the WiFi/ internet.
 * Open the terminal on your Raspberry Pi.
@@ -108,7 +120,7 @@ pip install lgpio
 
 <img src="https://github.com/mehrab-abrar/Raspberry-Pi-Voice-Assistant-Robot/assets/42034831/c17deabf-6a26-4d69-9483-434cfacc8cb7" alt="Screenshot 2024-04-09 030635" width="400">
 
-### Step 3: Change default mode for audio devices 
+### Step 5: Change default mode for audio devices 
 
 Now plug in your USB microphone and USB speaker to the USB ports of the Raspberry Pi. We need to define these two devices as our default audio devices. Open a new terminal and run the following commands:
 
@@ -129,7 +141,7 @@ This command will take you to the default configuration, scroll down to the defa
 
 <img src="https://github.com/mehrab-abrar/Raspberry-Pi-Voice-Assistant-Robot/assets/42034831/9b065dd3-308e-4d1e-bae0-0cb310568186" alt="Screenshot 2024-04-09 030846" width="400">
 
-### Step 5: Writing Python Script
+### Step 6: Writing and Executing the Python Script
 * Navigate to the voice_assistant directory from file explorer and create a new file named voice_assistant.py. Double click on the file and open it in a text editor. Now copy the voice_assistant_full.py code from here and paste it in the text editor. Make sure to replace the "KEY" with your own API key in the openai.api_key line.
 
 
@@ -146,6 +158,7 @@ source env/bin/activate
 
 ```bash
 python voice_assistant.py 2>/dev/null
+```
 
 * This code will keep listening for any word with the name "Tom". Say anything like "Hey Tom, .... " and the python script will convert your speech to text and send to the OpenAI API and generate a response back for you. If everything works well, you should be able to hear back a response.
 
