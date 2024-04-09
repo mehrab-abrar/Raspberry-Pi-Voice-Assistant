@@ -76,7 +76,7 @@ pip install pyaudio
 sudo apt install python3-pyaudio flac python3-espeak espeak python3-dotenv
 pip uninstall dotenv   (not required)
 pip install python-dotenv   (not required)
-pip install openai (pip install openai==0.28)
+pip install openai==0.28
 pip install SpeechRecognition
 pip install pyttsx3
 pip install gtts
@@ -97,16 +97,16 @@ sudo nano /usr/share/alsa/alsa.conf
 ```
 This command will take you to the default configuration, scroll down to the default section and change the "defaults.ctl.card 0" and "defaults.pcm.card 0" with your Card Number. Now press ctrl + x to save the configuration. Change the modifications and press enter.
 
-### Step 4: Obtaining OpenAI API Keys
-
-We will use the OpenAI API to generate a text response. 
-*	Sign up to  OpenAI account.
-*	Navigate to the API keys section and generate new API keys if you haven't already.
-*	Copy the API key and save for later use in your Python script.
 
 ### Step 5: Writing Python Script
-* From the Raspberry Pi icon at the top left, navigate to programming and select Thonny editor. Copy the voice_assistant.py code and paste in the Thonny editor. Save it as voice_assistant.py in the voice_assistant directory. 
+* Navigate to the voice_assistant directory and create a new file named voice_assistant.py. Double click on the file and open it in a text editor. Now copy the voice_assistant_full.py code and paste it in the text editor. Make sure to replace the "KEY" with your own API key in the openai.api_key line.
   
+* Now navigate to the voice_assistant directory and activate your virtual environment from the terminal.
+
+```bash
+python voice_assistant.py 2>/dev/null
+
+### Takeaways from this lab experiment
 * Write a Python script that utilizes the OpenAI platform API keys for interacting with ChatGPT.
 
 * Use libraries such as openai and pyaudio to handle text-to-speech and speech recognition functionalities.
