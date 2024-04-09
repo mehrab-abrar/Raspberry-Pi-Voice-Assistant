@@ -25,20 +25,34 @@ API is a way for two or more computer programs or components to communicate with
 
 ### Step 1: Setting up Raspberry Pi
 
-* Download the Raspberry Pi Imager from the [official Raspberry Pi website](https://www.raspberrypi.com/software/)
+* Download and install the Raspberry Pi Imager from the [official Raspberry Pi website](https://www.raspberrypi.com/software/) 
 * Insert the MicroSD card into your computer.
-* Open Raspberry Pi Imager and choose your Raspberry Pi 5 hardware device. Select the latest Raspbian OS from the list of available operating systems. We choose the Debian Bookwarm 64-bit with desktop environment. Select your MicroSD card as the storage location.
-* Click "Next" and edit the OS customization settings. Here, add your username and password of choice
+* Open Raspberry Pi Imager and choose your Raspberry Pi 5 hardware device. Select the latest Raspbian OS from the list of available operating systems. We choose the Debian Bookwarm 64-bit with desktop environment. Select your MicroSD card as the storage location (check for the storage capacity of your MicroSD card)
+
+![Screenshot 2024-04-09 003233](https://github.com/mehrab-abrar/Raspberry-Pi-Voice-Assistant-Robot/assets/42034831/c9aff5e8-ccee-4285-b684-da8cee67a98f)
+
+* Click "Next" and edit the OS customization settings. Here, add your username and password of choice.
+
+![Screenshot 2024-04-09 003321](https://github.com/mehrab-abrar/Raspberry-Pi-Voice-Assistant-Robot/assets/42034831/50042928-eb72-4cdf-898a-a446e49fd1e3)
+
+![Screenshot 2024-04-09 003602](https://github.com/mehrab-abrar/Raspberry-Pi-Voice-Assistant-Robot/assets/42034831/bb608a93-e56f-4842-af73-f65223804da0)
+
 * Continue writing the OS into the MicroSD card and wait for the process to complete. In the meantime, you might want to go to Step 2 and obtain the OpenAI API keys to save some time! Come back to this step after you generate your OpenAI API key.
+  
 * Once the OS writing process is completed, eject the MicroSD card safely and insert it into your Raspberry Pi.
+  
 * Connect the monitor, keyboard, and mouse to your Raspberry Pi.
+  
 * Plug in the adapter and power on the Raspberry Pi. Check if you are automatically connected to the WiFi Network. If not, connect to a WiFi manually.
 
 ### Step 2: Obtaining OpenAI API Keys
 
 We will use the OpenAI API to generate a text response. 
 * Go to [OpenAI Developer Platform API Keys Page](ttps://platform.openai.com/api-keys) and Log in/ Sign up with your student account.
-* Now click on "Create new secret key" and give your key a name of your choice. Create secret key and copy this key to a notepad/ text document to your computer. We will use this API key in the python script of the voice assistant. 
+  
+* Now click on "Create new secret key" and give your key a name of your choice. Create secret key and copy this key to a notepad/ text document to your computer. We will use this API key in the python script of the voice assistant.
+
+![Screenshot 2024-04-09 145345](https://github.com/mehrab-abrar/Raspberry-Pi-Voice-Assistant-Robot/assets/42034831/42f877a1-b4cc-4717-9657-db2d0c65b3d0)
 
 ### Step 2: Installing Dependencies
 
@@ -50,6 +64,7 @@ Lets check for updates and upgrades first.
 sudo apt update 
 sudo apt upgrade
 ```
+![Screenshot 2024-04-09 030132](https://github.com/mehrab-abrar/Raspberry-Pi-Voice-Assistant-Robot/assets/42034831/6b15454e-0140-4f5e-8152-077514a139c7)
 
 We will create a separate directory for this project and install the dependencies in virtual environment. 
 
@@ -64,6 +79,7 @@ This will create a virtual environment in the voice_assistant directory. We will
 ```bash
 source env/bin/activate
 ```
+![Screenshot 2024-04-09 030252](https://github.com/mehrab-abrar/Raspberry-Pi-Voice-Assistant-Robot/assets/42034831/9ed11ccd-27b3-4e11-805e-9bff52938081)
 
 * Now install necessary dependencies by running the following terminal commands inside the virtual environment:
 
@@ -81,6 +97,8 @@ pip install gtts
 pip install lgpio
 ```
 
+![Screenshot 2024-04-09 030635](https://github.com/mehrab-abrar/Raspberry-Pi-Voice-Assistant-Robot/assets/42034831/c17deabf-6a26-4d69-9483-434cfacc8cb7)
+
 ### Step 3: Change default mode for audio devices 
 
 Now plug in your USB microphone and USB speaker to the USB ports of the Raspberry Pi. We need to define these two devices as our default audio devices. Open a new terminal and run the following commands:
@@ -88,21 +106,38 @@ Now plug in your USB microphone and USB speaker to the USB ports of the Raspberr
 ```bash
 arecord -l 
 ```
-You will be able to see a list of the hardware devices that are connected to your Raspberry Pi. Note the Card Number associated with your USB audio. Now we will change the card number in the default settings.
+You will be able to see a list of the hardware devices that are connected to your Raspberry Pi. Note the Card Number associated with your USB audio (In this case, the card number is 2). Now we will change the card number in the default settings.
 
 ```bash
 sudo nano /usr/share/alsa/alsa.conf
 ```
+
+![Screenshot 2024-04-09 030811](https://github.com/mehrab-abrar/Raspberry-Pi-Voice-Assistant-Robot/assets/42034831/005cc619-64b1-498a-9064-76c28956dda0)
+
 This command will take you to the default configuration, scroll down to the default section and change the "defaults.ctl.card 0" and "defaults.pcm.card 0" with your Card Number. Now press ctrl + x to save the configuration. Change the modifications and press enter.
 
+![Screenshot 2024-04-09 030846](https://github.com/mehrab-abrar/Raspberry-Pi-Voice-Assistant-Robot/assets/42034831/9b065dd3-308e-4d1e-bae0-0cb310568186)
 
 ### Step 5: Writing Python Script
-* Navigate to the voice_assistant directory and create a new file named voice_assistant.py. Double click on the file and open it in a text editor. Now copy the voice_assistant_full.py code and paste it in the text editor. Make sure to replace the "KEY" with your own API key in the openai.api_key line.
-  
-* Now navigate to the voice_assistant directory and activate your virtual environment from the terminal.
+* Navigate to the voice_assistant directory from file explorer and create a new file named voice_assistant.py. Double click on the file and open it in a text editor. Now copy the voice_assistant_full.py code from here and paste it in the text editor. Make sure to replace the "KEY" with your own API key in the openai.api_key line.
+
+![Screenshot 2024-04-09 040155](https://github.com/mehrab-abrar/Raspberry-Pi-Voice-Assistant-Robot/assets/42034831/0a5d501d-3cfc-4110-88ff-83e60fe5274d)
+
+* From the terminal, navigate to the voice_assistant directory and activate your virtual environment using:
+
+```bash
+cd voice_assistant
+source env/bin/activate
+```
+
+* Run the python script by executing the the following command:
 
 ```bash
 python voice_assistant.py 2>/dev/null
+
+* This code will keep listening for any word with the name "Tom". Say anything like "Hey Tom, .... " and the python script will convert your speech to text and send to the OpenAI API and generate a response back for you. If everything works well, you should be able to hear back a response.
+
+* Use voice commands "Turn on the light/ Turn off the light" to control your relay.
 
 ### Takeaways from this lab experiment
 * Write a Python script that utilizes the OpenAI platform API keys for interacting with ChatGPT.
