@@ -29,7 +29,7 @@ API is a way for two or more computer programs or components to communicate with
 * Insert the MicroSD card into your computer.
 * Open Raspberry Pi Imager and choose your Raspberry Pi 5 hardware device. Select the latest Raspbian OS from the list of available operating systems. We choose the Debian Bookwarm 64-bit with desktop environment. Select your MicroSD card as the storage location.
 * Click "Next" and edit the OS customization settings. Here, add your username and password of choice
-* Continue writing the OS into the MicroSD card and wait for the process to complete. In the meantime, you might want to go to Step 2 and obtain the OpenAI API keys to save some time!
+* Continue writing the OS into the MicroSD card and wait for the process to complete. In the meantime, you might want to go to Step 2 and obtain the OpenAI API keys to save some time! Come back to this step after you generate your OpenAI API key.
 * Once the OS writing process is completed, eject the MicroSD card safely and insert it into your Raspberry Pi.
 * Connect the monitor, keyboard, and mouse to your Raspberry Pi.
 * Plug in the adapter and power on the Raspberry Pi. Check if you are automatically connected to the WiFi Network. If not, connect to a WiFi manually.
@@ -37,14 +37,12 @@ API is a way for two or more computer programs or components to communicate with
 ### Step 2: Obtaining OpenAI API Keys
 
 We will use the OpenAI API to generate a text response. 
-•	Sign up to  OpenAI account.
-•	Navigate to the API keys section and generate new API keys if you haven't already.
-•	Copy the API key and save for later use in your Python script.
-
+* Go to [OpenAI Developer Platform API Keys Page](ttps://platform.openai.com/api-keys) and Log in/ Sign up with your student account.
+* Now click on "Create new secret key" and give your key a name of your choice. Create secret key and copy this key to a notepad/ text document to your computer. We will use this API key in the python script of the voice assistant. 
 
 ### Step 2: Installing Dependencies
 
-* Connect your Raspberry Pi to the internet.
+* Connect your Raspberry Pi to the WiFi/ internet.
 * Open the terminal on your Raspberry Pi.
 
 Lets check for updates and upgrades first.
