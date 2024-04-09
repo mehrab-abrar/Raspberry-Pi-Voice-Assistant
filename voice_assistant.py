@@ -8,7 +8,7 @@ listening = True
 engine = pyttsx3.init()
 
 # Set your openai api key and customize the chatgpt role
-openai.api_key = "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"
+openai.api_key = "ABC"
 messages = [{"role": "system", "content": "Your name is Tom and give answers in 2 lines"}]
 
 # Customizing the output voice
@@ -66,21 +66,21 @@ while listening:
             
             elif "turn on the light" in response.lower():
                 turn_on_light()
-                response_from_openai = get_response(response)
-                engine.setProperty('rate', 120)
-                engine.setProperty('volume', volume)
-                engine.setProperty('voice', 'greek')
-                engine.say(response_from_openai)
-                engine.runAndWait()
+                # response_from_openai = get_response(response)
+                # engine.setProperty('rate', 120)
+                # engine.setProperty('volume', volume)
+                # engine.setProperty('voice', 'greek')
+                # engine.say(response_from_openai)
+                # engine.runAndWait()
 
             elif "turn off the light" in response.lower():
                 turn_off_light()
                 response_from_openai = get_response(response)
-                engine.setProperty('rate', 120)
-                engine.setProperty('volume', volume)
-                engine.setProperty('voice', 'greek')
-                engine.say(response_from_openai)
-                engine.runAndWait()
+                # engine.setProperty('rate', 120)
+                # engine.setProperty('volume', volume)
+                # engine.setProperty('voice', 'greek')
+                # engine.say(response_from_openai)
+                # engine.runAndWait()
 
             else:
                 print("Didn't recognize 'turn on the light' or 'turn off the light'.")
