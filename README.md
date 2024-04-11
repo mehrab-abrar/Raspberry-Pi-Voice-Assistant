@@ -107,8 +107,6 @@ sudo apt install python3-dotenv
 sudo apt-get install portaudio19-dev
 pip install pyaudio
 sudo apt install python3-pyaudio flac python3-espeak espeak python3-dotenv
-pip uninstall dotenv   (not required)
-pip install python-dotenv   (not required)
 pip install openai==0.28
 pip install SpeechRecognition
 pip install pyttsx3
