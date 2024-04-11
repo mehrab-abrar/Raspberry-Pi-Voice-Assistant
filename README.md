@@ -62,11 +62,11 @@ We will use the OpenAI API to generate a text response.
 This is an easy circuit setup, follow the diagram and connect your Raspberry Pi with the Relay Module.
 
 Connections:
-* Raspberry Pi Pin 4 (5V)       --- Relay Module VCC
-* Raspberry Pi Pin 6 (GND)      --- Relay Module GND
+* Raspberry Pi Pin 4 (5V)       --- Relay Module VCC --- Resistor --- LED +ve
+* Raspberry Pi Pin 6 (GND)      --- Relay Module GND --- Relay Output
 * Raspberry Pi Pin 12 (GPIO 18) --- Relay Module IN1
 
-<img width="600" alt="relay-pi5-circuit" src="https://github.com/mehrab-abrar/Raspberry-Pi-Voice-Assistant-Robot/assets/42034831/5b048b50-de17-418e-8035-18a890e313ba">
+<img width="800" alt="relay-pi5-circuit" src="https://github.com/mehrab-abrar/Raspberry-Pi-Voice-Assistant-Robot/assets/42034831/cc38ab93-ed93-44ec-b101-d1f10290cdc2">
 
 
 ### Step 4: Installing Dependencies
