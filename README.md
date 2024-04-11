@@ -50,7 +50,7 @@ API is a way for two or more computer programs or components to communicate with
 ### Step 2: Obtaining OpenAI API Keys
 
 We will use the OpenAI API to generate a text response. 
-* Go to [OpenAI Developer Platform API Keys Page](ttps://platform.openai.com/api-keys) and Log in/ Sign up with your student account.
+* Go to OpenAI Developer Platform API Keys Page: https://platform.openai.com/api-keys and Log in/ Sign up with your student account.
   
 * Now click on "Create new secret key" and give your key a name of your choice. Create secret key and copy this key to a notepad/ text document to your computer. We will use this API key in the python script of the voice assistant.
 
