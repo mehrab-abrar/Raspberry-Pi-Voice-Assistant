@@ -114,7 +114,6 @@ pip install gtts
 pip install lgpio
 ```
 
-
 <img src="https://github.com/mehrab-abrar/Raspberry-Pi-Voice-Assistant-Robot/assets/42034831/c17deabf-6a26-4d69-9483-434cfacc8cb7" alt="Screenshot 2024-04-09 030635" width="400">
 
 ### Step 5: Change default mode for audio devices 
@@ -124,14 +123,17 @@ Now plug in your USB microphone and USB speaker to the USB ports of the Raspberr
 ```bash
 arecord -l 
 ```
-You will be able to see a list of the hardware devices that are connected to your Raspberry Pi. Note the Card Number associated with your USB audio (In this case, the card number is 2). Now we will change the card number in the default settings.
+You will be able to see a list of the hardware devices that are connected to your Raspberry Pi. Note the Card Number associated with your USB audio (In this case, the card number is 2, yours might be different).
+
+<img src="https://github.com/mehrab-abrar/Raspberry-Pi-Voice-Assistant-Robot/assets/42034831/d8285444-fd8b-4bee-b34a-acfed044d957" alt="Screenshot 2024-04-09 031129" width="400">
+
+Now we will change the card number in the default settings.
 
 ```bash
 sudo nano /usr/share/alsa/alsa.conf
 ```
-
-
 <img src="https://github.com/mehrab-abrar/Raspberry-Pi-Voice-Assistant-Robot/assets/42034831/005cc619-64b1-498a-9064-76c28956dda0" alt="Screenshot 2024-04-09 030811" width="400">
+
 
 This command will take you to the default configuration, scroll down to the default section and change the "defaults.ctl.card 0" and "defaults.pcm.card 0" with your Card Number. Now press ctrl + x to save the configuration. Change the modifications and press enter.
 
