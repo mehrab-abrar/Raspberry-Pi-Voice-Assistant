@@ -2,7 +2,7 @@
 This is a lab experiment designed as part of TECHIN 515 - Hardware Software Lab 2.
 
 ## Objective
-In this lab, we will learn how to develop a voice assistant robot powered by ChatGPT, a state-of-the-art language model developed by OpenAI. We will configure a Raspberry Pi with the necessary hardware components and utilize OpenAI's Application programming interface (API) to enable conversational interactions with your robot... (DETAILS)
+In this lab, we will learn how to develop a voice assistant powered by ChatGPT, a state-of-the-art language model developed by OpenAI. We will configure a Raspberry Pi with the necessary hardware and software components and utilize OpenAI's Application programming interface (API) to enable conversational interactions. 
 Theory on Text to Speech, and Speech to Text...
 
 API is a way for two or more computer programs or components to communicate with each other...
