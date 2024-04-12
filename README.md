@@ -3,9 +3,6 @@ This is a lab experiment designed as part of TECHIN 515 - Hardware Software Lab 
 
 ## Objective
 In this lab, we will learn how to develop a voice assistant powered by ChatGPT, a state-of-the-art language model developed by OpenAI. We will configure a Raspberry Pi with the necessary hardware and software components and utilize OpenAI's Application programming interface (API) to enable conversational interactions. 
-Theory on Text to Speech, and Speech to Text...
-
-API is a way for two or more computer programs or components to communicate with each other...
 
 ## Hardware
 1.	Raspberry Pi 5
@@ -208,8 +205,9 @@ python voice_assistant.py 2>/dev/null
 * Use voice commands "Turn on the light/ Turn off the light" to control your relay.
 
 ### Takeaways from this lab experiment
-* Write a Python script that utilizes the OpenAI platform API keys for interacting with ChatGPT.
 
-* Use libraries such as openai and pyaudio to handle text-to-speech and speech recognition functionalities.
+* Getting familiarized with the python script that utilizes the OpenAI platform API keys for interacting with ChatGPT.
 
-* Implement code logic to capture audio input from the microphone, send it to the OpenAI API for processing, and play back the response through the speaker.
+* Using libraries to handle text-to-speech and speech recognition functionalities.
+
+* Implementing code logic to capture audio input from the microphone, convert it to text, send the text to the OpenAI API for processing, and play back the response through the speaker.
