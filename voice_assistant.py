@@ -66,22 +66,10 @@ while listening:
             
             elif "turn on the light" in response.lower():
                 turn_on_light()
-                # response_from_openai = get_response(response)
-                # engine.setProperty('rate', 120)
-                # engine.setProperty('volume', volume)
-                # engine.setProperty('voice', 'greek')
-                # engine.say(response_from_openai)
-                # engine.runAndWait()
 
             elif "turn off the light" in response.lower():
                 turn_off_light()
-                response_from_openai = get_response(response)
-                # engine.setProperty('rate', 120)
-                # engine.setProperty('volume', volume)
-                # engine.setProperty('voice', 'greek')
-                # engine.say(response_from_openai)
-                # engine.runAndWait()
-
+                
             else:
                 print("Didn't recognize 'turn on the light' or 'turn off the light'.")
 
