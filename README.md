@@ -62,13 +62,13 @@ We will use the OpenAI API to generate a text response.
 This is an easy circuit setup, follow the diagram and connect your Raspberry Pi with the Relay Module.
 
 Connections:
-* Raspberry Pi Pin 4 (5V) --------- Relay Module VCC
+* Raspberry Pi Pin 4 (5V) ----------- Relay Module VCC
 * Raspberry Pi Pin 6 (GND) -------- Relay Module GND
 * Raspberry Pi Pin 12 (GPIO 18) --- Relay Module IN1
 
 
-<img width="600" alt="relay-pi5-circuit" src="https://github.com/mehrab-abrar/Raspberry-Pi-Voice-Assistant-Robot/assets/42034831/6eac56d0-2684-46e4-b8e9-5f4ab5f84257">
-
+<img width="600" alt="relay-pi5-circuit" src="https://github.com/mehrab-abrar/Raspberry-Pi-Voice-Assistant-Robot/assets/42034831/6eac56d0-2684-46e4-b8e9-5f4ab5f84257"><br>
+<br>
 For your reference, here is the pinout diagram of a Raspberry Pi.
 
 <img width="650" alt="relay-pi5-circuit" src="https://github.com/mehrab-abrar/Raspberry-Pi-Voice-Assistant-Robot/assets/42034831/64232dab-a1f3-4896-9e8d-1f3543094616">
@@ -130,7 +130,9 @@ arecord -l
 ```
 You will be able to see a list of the hardware devices that are connected to your Raspberry Pi. Note the Card Number associated with your USB audio (In this case, the card number is 2, yours might be different).
 
-<img src="https://github.com/mehrab-abrar/Raspberry-Pi-Voice-Assistant-Robot/assets/42034831/d8285444-fd8b-4bee-b34a-acfed044d957" alt="Screenshot 2024-04-09 031129" width="400">
+<img src="https://github.com/mehrab-abrar/Raspberry-Pi-Voice-Assistant-Robot/assets/42034831/d8285444-fd8b-4bee-b34a-acfed044d957" alt="Screenshot 2024-04-09 031129" width="400"><br>
+
+<br>
 
 Now we will change the card number in the default settings.
 
@@ -140,7 +142,9 @@ sudo nano /usr/share/alsa/alsa.conf
 <img src="https://github.com/mehrab-abrar/Raspberry-Pi-Voice-Assistant-Robot/assets/42034831/005cc619-64b1-498a-9064-76c28956dda0" alt="Screenshot 2024-04-09 030811" width="400">
 
 
-This command will take you to the default configuration, scroll down to the default section and change the "defaults.ctl.card 0" and "defaults.pcm.card 0" with your Card Number. Now press ctrl + x to save the configuration. Change the modifications and press enter.
+This command will take you to the default configuration, scroll down to the default section and change the "defaults.ctl.card 0" and "defaults.pcm.card 0" with your Card Number. Now press ctrl + x to save the configuration. Change the modifications and press enter.<br>
+
+<br>
 
 
 <img src="https://github.com/mehrab-abrar/Raspberry-Pi-Voice-Assistant-Robot/assets/42034831/9b065dd3-308e-4d1e-bae0-0cb310568186" alt="Screenshot 2024-04-09 030846" width="400">
