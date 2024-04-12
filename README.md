@@ -77,6 +77,8 @@ while True:
     sleep(1)
 ```
 
+<img width="400" alt="Screenshot 2024-04-12 022334" src="https://github.com/mehrab-abrar/Raspberry-Pi-Voice-Assistant-Robot/assets/42034831/4ba47449-7c7c-48c9-8f1d-67b6ca6b3793">
+
 <img width="400" alt="Screenshot 2024-04-12 022503" src="https://github.com/mehrab-abrar/Raspberry-Pi-Voice-Assistant-Robot/assets/42034831/26cc96a2-05a6-4b33-b0cc-23b46abd2534">
 
 
