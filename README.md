@@ -1,4 +1,4 @@
-# Raspberry-Pi-Voice-Assistant
+# Raspberry Pi Voice Assistant
 This is a lab experiment designed as part of TECHIN 515 - Hardware Software Lab 2.
 
 ## Objective
