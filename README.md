@@ -22,7 +22,7 @@ API is a way for two or more computer programs or components to communicate with
 
 ## Steps 
 
-### Step 1: Setting up Raspberry Pi
+### Step 1: Setting up the Raspberry Pi
 
 * Download and install the Raspberry Pi Imager from the [official Raspberry Pi website](https://www.raspberrypi.com/software/) 
 * Insert the MicroSD card into your computer.
@@ -47,7 +47,40 @@ API is a way for two or more computer programs or components to communicate with
   
 * Plug in the adapter and power on the Raspberry Pi. Check if you are automatically connected to the WiFi Network. If not, connect to a WiFi manually.
 
-### Step 2: Obtaining OpenAI API Keys
+### General-Purpose Input/Output (GPIO)
+
+One powerful feature of the Raspberry Pi is the row of GPIO pins along the top edge of the board. These pins are a physical interface between the Raspberry Pi and the outside world. Here is the pinout diagram of a Raspberry Pi with GPIO pins.
+
+<img width="650" alt="relay-pi5-circuit" src="https://github.com/mehrab-abrar/Raspberry-Pi-Voice-Assistant-Robot/assets/42034831/64232dab-a1f3-4896-9e8d-1f3543094616">
+
+_Pinout Diagram Reference Link: https://www.hackatronic.com/raspberry-pi-5-pinout-specifications-pricing-a-complete-guide/_<br>
+<br>
+Let's learn how to write and execute a simple python code to control an LED connected to the Raspberry Pi GPIO pin 17.
+* Build the following circuit.
+
+<img width="400" alt="LED-Blink" src="https://github.com/mehrab-abrar/Raspberry-Pi-Voice-Assistant-Robot/assets/42034831/5ff3a883-52c8-4d1f-ae64-e0c17745cdf0"><br>
+<br>
+
+* Open the Thonny editor from: Raspberry Pi Icon >> Programming >> Thonny. Write the following code in Thonny and run the code. This will blink the LED.
+
+```python
+
+from gpiozero import LED
+from time import sleep
+
+led = LED(17)
+
+while True:  
+    led.on()
+    sleep(1)
+    led.off()
+    sleep(1)
+```
+
+<img width="400" alt="Screenshot 2024-04-12 022503" src="https://github.com/mehrab-abrar/Raspberry-Pi-Voice-Assistant-Robot/assets/42034831/26cc96a2-05a6-4b33-b0cc-23b46abd2534">
+
+
+### Step 2: Obtaining the OpenAI API key
 
 We will use the OpenAI API to generate a text response. 
 * Go to OpenAI Developer Platform API Keys Page: https://platform.openai.com/api-keys and Log in/ Sign up with your student account.
@@ -76,7 +109,7 @@ For your reference, here is the pinout diagram of a Raspberry Pi.
 _Pinout Diagram Reference Link: https://www.hackatronic.com/raspberry-pi-5-pinout-specifications-pricing-a-complete-guide/_<br>
 <br>
 
-### Step 4: Installing Dependencies
+### Step 4: Installing the dependencies
 
 * Connect your Raspberry Pi to the WiFi/ internet.
 * Open the terminal on your Raspberry Pi.
@@ -121,7 +154,7 @@ pip install lgpio
 
 <img src="https://github.com/mehrab-abrar/Raspberry-Pi-Voice-Assistant-Robot/assets/42034831/c17deabf-6a26-4d69-9483-434cfacc8cb7" alt="Screenshot 2024-04-09 030635" width="400">
 
-### Step 5: Change default mode for audio devices 
+### Step 5: Changing the default mode for audio devices 
 
 Now plug in your USB microphone and USB speaker to the USB ports of the Raspberry Pi. We need to define these two devices as our default audio devices. Open a new terminal and run the following commands:
 
@@ -149,7 +182,7 @@ This command will take you to the default configuration, scroll down to the defa
 <img src="https://github.com/mehrab-abrar/Raspberry-Pi-Voice-Assistant-Robot/assets/42034831/4ebf92b9-fe59-49a7-b11f-5e727aede947" alt="Screenshot 2024-04-09 030846" width="400">
 
 
-### Step 6: Writing and Executing the Python Script
+### Step 6: Writing and executing the python script
 * Navigate to the voice_assistant directory from File Manager (two icons right to the Raspberry Pi icon on the top left corner) and create a new file named voice_assistant.py. Double click on the file and open it in a text editor. Now copy the **voice_assistant.py** script from here and paste it in the text editor. Make sure to replace the "KEY" with your own API key in the openai.api_key line.
 
 
