@@ -139,13 +139,10 @@ Now we will change the card number in the default settings.
 ```bash
 sudo nano /usr/share/alsa/alsa.conf
 ```
-<img src="https://github.com/mehrab-abrar/Raspberry-Pi-Voice-Assistant-Robot/assets/42034831/005cc619-64b1-498a-9064-76c28956dda0" alt="Screenshot 2024-04-09 030811" width="400">
-
-
-This command will take you to the default configuration, scroll down to the default section and change the "defaults.ctl.card 0" and "defaults.pcm.card 0" with your Card Number. Now press ctrl + x to save the configuration. Change the modifications and press enter.<br>
-
+<img src="https://github.com/mehrab-abrar/Raspberry-Pi-Voice-Assistant-Robot/assets/42034831/005cc619-64b1-498a-9064-76c28956dda0" alt="Screenshot 2024-04-09 030811" width="400"><br>
 <br>
 
+This command will take you to the default configuration, scroll down to the default section and change the "defaults.ctl.card 0" and "defaults.pcm.card 0" with your Card Number. Now press ctrl + x to save the configuration. Change the modifications and press enter.
 
 <img src="https://github.com/mehrab-abrar/Raspberry-Pi-Voice-Assistant-Robot/assets/42034831/9b065dd3-308e-4d1e-bae0-0cb310568186" alt="Screenshot 2024-04-09 030846" width="400">
 
