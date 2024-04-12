@@ -71,7 +71,6 @@ Connections:
 
 For your reference, here is the pinout diagram of a Raspberry Pi 5. 
 
-<img width="600" alt="Raspberry-Pi-5-Pinout" src="https://github.com/mehrab-abrar/Raspberry-Pi-Voice-Assistant-Robot/assets/42034831/ecac7728-baaf-42bd-854e-effdc7167db3">
 
 _Pinout Diagram Reference Link: https://www.hackatronic.com/raspberry-pi-5-pinout-specifications-pricing-a-complete-guide/_
 
