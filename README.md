@@ -76,8 +76,6 @@ For your reference, here is the pinout diagram of a Raspberry Pi.
 _Pinout Diagram Reference Link: https://www.hackatronic.com/raspberry-pi-5-pinout-specifications-pricing-a-complete-guide/_<br>
 <br>
 
-Now plug in the USB microphone and USB speaker to your raspberry pi.
-
 ### Step 4: Installing Dependencies
 
 * Connect your Raspberry Pi to the WiFi/ internet.
@@ -104,7 +102,6 @@ This will create a virtual environment in the voice_assistant directory. We will
 ```bash
 source env/bin/activate
 ```
-
 
 <img src="https://github.com/mehrab-abrar/Raspberry-Pi-Voice-Assistant-Robot/assets/42034831/9ed11ccd-27b3-4e11-805e-9bff52938081" alt="Screenshot 2024-04-09 030252" width="400">
 
@@ -149,8 +146,11 @@ This command will take you to the default configuration, scroll down to the defa
 
 <img src="https://github.com/mehrab-abrar/Raspberry-Pi-Voice-Assistant-Robot/assets/42034831/9b065dd3-308e-4d1e-bae0-0cb310568186" alt="Screenshot 2024-04-09 030846" width="400">
 
+<img src="https://github.com/mehrab-abrar/Raspberry-Pi-Voice-Assistant-Robot/assets/42034831/4ebf92b9-fe59-49a7-b11f-5e727aede947" alt="Screenshot 2024-04-09 030846" width="400">
+
+
 ### Step 6: Writing and Executing the Python Script
-* Navigate to the voice_assistant directory from file explorer and create a new file named voice_assistant.py. Double click on the file and open it in a text editor. Now copy the **voice_assistant.py** script from here and paste it in the text editor. Make sure to replace the "KEY" with your own API key in the openai.api_key line.
+* Navigate to the voice_assistant directory from File Manager (two icons right to the Raspberry Pi icon on the top left corner) and create a new file named voice_assistant.py. Double click on the file and open it in a text editor. Now copy the **voice_assistant.py** script from here and paste it in the text editor. Make sure to replace the "KEY" with your own API key in the openai.api_key line.
 
 
 <img src="https://github.com/mehrab-abrar/Raspberry-Pi-Voice-Assistant-Robot/assets/42034831/0a5d501d-3cfc-4110-88ff-83e60fe5274d" alt="Screenshot 2024-04-09 040155" width="400">
