@@ -66,7 +66,7 @@ Connections:
 * Raspberry Pi Pin 6 (GND)      --- Relay Module GND --- Relay Output
 * Raspberry Pi Pin 12 (GPIO 18) --- Relay Module IN1
 
-<img width="800" alt="relay-pi5-circuit" src="https://github.com/mehrab-abrar/Raspberry-Pi-Voice-Assistant-Robot/assets/42034831/3fb9320b-dc6c-40e4-9dc2-ae69615ff83e">
+<img width="600" alt="relay-pi5-circuit" src="https://github.com/mehrab-abrar/Raspberry-Pi-Voice-Assistant-Robot/assets/42034831/3fb9320b-dc6c-40e4-9dc2-ae69615ff83e">
 
 
 
