@@ -2,16 +2,17 @@
 This is a lab experiment designed as part of TECHIN 515 - Hardware Software Lab 2.
 
 ## Objective
-In this lab, we will learn how to develop a voice assistant powered by ChatGPT, a state-of-the-art language model developed by OpenAI. We will configure a Raspberry Pi with the necessary hardware and software components and utilize OpenAI's Application programming interface (API) to enable conversational interactions. 
+In this lab, we will learn how to uae a Raspberry Pi 5 to create a smart home voice assistant using natural langrauge processing to turn lights on and off. Optionally, we will also use a voice assistant powered by ChatGPT, a state-of-the-art language model developed by OpenAI. We will configure a Raspberry Pi with the necessary hardware and software components and utilize OpenAI's Application programming interface (API) to enable conversational interactions. 
 
 ## Hardware
 1.	Raspberry Pi 5
 2.	Power adapter for Raspberry Pi (27 Watt recommended)
-3.	HDMI cable and Monitor
-4.	USB Keyboard and mouse
-5.	MicroSD card (16GB or larger recommended)
+3.	HDMI cable, microHDMI to HDMI adapter, and monitor
+4.	USB keyboard and mouse
+5.	MicroSD card (16GB or larger recommended), and MicroSD card Adapter
 6.  Relay Module
-7. Lamp (Optional)
+7.  Two LEDs (different colors), a breadboard, and two current limiting resistors (anything between 270-1000 ohms)
+8. Lamp (Optional)
 
 ## Software: 
 1.	The Latest Raspbian Operating System: Debian Bookwarm 64-bit with desktop environment
@@ -22,7 +23,7 @@ In this lab, we will learn how to develop a voice assistant powered by ChatGPT, 
 ### Step 1: Setting up the Raspberry Pi
 
 * Download and install the Raspberry Pi Imager from the [official Raspberry Pi website](https://www.raspberrypi.com/software/) 
-* Insert the MicroSD card into your computer.
+* Insert the MicroSD card into your computer uaing the MicroSD card adapter. If you don't have a SD card port, you can borrow a dock from the IT supply room.
 * Open Raspberry Pi Imager and choose your Raspberry Pi 5 hardware device. Select the latest Raspbian OS from the list of available operating systems. We choose the Debian Bookwarm 64-bit with desktop environment. Select your MicroSD card as the storage location (check for the storage capacity of your MicroSD card)
 
 <img src="https://github.com/mehrab-abrar/Raspberry-Pi-Voice-Assistant-Robot/assets/42034831/c9aff5e8-ccee-4285-b684-da8cee67a98f" alt="Screenshot 2024-04-09 003233" width="400">
@@ -203,6 +204,15 @@ python voice_assistant.py 2>/dev/null
 * This code will keep listening for any word with the name "Tom". Say anything like "Hey Tom, .... " and the python script will convert your speech to text and send to the OpenAI API and generate a response back for you. If everything works well, you should be able to hear back a response.
 
 * Use voice commands "Turn on the light/ Turn off the light" to control your relay.
+
+### Troubleshooting
+* If the code consistently displays "Listening..." without generating a response, attempt reducing your microphone volume by half.
+
+### Tasks for you
+
+* Connect a 2nd LED to your Relay and edit the code so that you can control both LEDs with speech command. You should be able to Turn on/ Turn off both LED's independently with speech command.
+* You can use a breadboard to distribute the power source from the Raspberry Pi to the LEDs.
+* _Hint: Build two new functions to Turn on/ Turn off the 2nd LED, and call them in your while loop_
 
 ### Takeaways from this lab experiment
 
