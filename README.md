@@ -57,20 +57,21 @@ We will use the OpenAI API to generate a text response.
 
 <img src="https://github.com/mehrab-abrar/Raspberry-Pi-Voice-Assistant-Robot/assets/42034831/42f877a1-b4cc-4717-9657-db2d0c65b3d0" alt="Screenshot 2024-04-09 145345" width="400">
 
-### Step 3: Build the circuit
+### Step 3: Building the circuit
 
 This is an easy circuit setup, follow the diagram and connect your Raspberry Pi with the Relay Module.
 
 Connections:
-* Raspberry Pi Pin 4 (5V)       --- Relay Module VCC
-* Raspberry Pi Pin 6 (GND)      --- Relay Module GND
+* Raspberry Pi Pin 4 (5V) --------- Relay Module VCC
+* Raspberry Pi Pin 6 (GND) -------- Relay Module GND
 * Raspberry Pi Pin 12 (GPIO 18) --- Relay Module IN1
 
 
-<img width="600" alt="relay-pi5-circuit" src="https://github.com/mehrab-abrar/Raspberry-Pi-Voice-Assistant-Robot/assets/42034831/3fb9320b-dc6c-40e4-9dc2-ae69615ff83e">
+<img width="600" alt="relay-pi5-circuit" src="https://github.com/mehrab-abrar/Raspberry-Pi-Voice-Assistant-Robot/assets/42034831/6eac56d0-2684-46e4-b8e9-5f4ab5f84257">
 
-For your reference, here is the pinout diagram of a Raspberry Pi 5. 
+For your reference, here is the pinout diagram of a Raspberry Pi.
 
+<img width="650" alt="relay-pi5-circuit" src="https://github.com/mehrab-abrar/Raspberry-Pi-Voice-Assistant-Robot/assets/42034831/64232dab-a1f3-4896-9e8d-1f3543094616">
 
 _Pinout Diagram Reference Link: https://www.hackatronic.com/raspberry-pi-5-pinout-specifications-pricing-a-complete-guide/_
 
@@ -84,7 +85,6 @@ Lets check for updates and upgrades first.
 sudo apt update 
 sudo apt upgrade
 ```
-
 
 <img src="https://github.com/mehrab-abrar/Raspberry-Pi-Voice-Assistant-Robot/assets/42034831/6b15454e-0140-4f5e-8152-077514a139c7" alt="Screenshot 2024-04-09 030132" width="400">
 
