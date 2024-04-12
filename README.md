@@ -73,7 +73,10 @@ For your reference, here is the pinout diagram of a Raspberry Pi.
 
 <img width="650" alt="relay-pi5-circuit" src="https://github.com/mehrab-abrar/Raspberry-Pi-Voice-Assistant-Robot/assets/42034831/64232dab-a1f3-4896-9e8d-1f3543094616">
 
-_Pinout Diagram Reference Link: https://www.hackatronic.com/raspberry-pi-5-pinout-specifications-pricing-a-complete-guide/_
+_Pinout Diagram Reference Link: https://www.hackatronic.com/raspberry-pi-5-pinout-specifications-pricing-a-complete-guide/_<br>
+<br>
+
+Now plug in the USB microphone and USB speaker to your raspberry pi.
 
 ### Step 4: Installing Dependencies
 
