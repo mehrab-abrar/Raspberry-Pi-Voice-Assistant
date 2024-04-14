@@ -211,9 +211,8 @@ python voice_assistant.py 2>/dev/null
 
 ### Tasks for you
 
-* Connect a 2nd LED to your Relay and edit the code so that you can control both LEDs with speech command. You should be able to Turn on/ Turn off both LED's independently with speech command.
-* You can use a breadboard to distribute the power source from the Raspberry Pi to the LEDs.
-* _Hint: Build two new functions to Turn on/ Turn off the 2nd LED, and call them in your while loop_
+* Connect a second LED to your Relay and edit the code so that you can control both LEDs with voice command. You should be able to Turn on/ Turn off both LED's independently with speech command (_Hint: Build two new functions to Turn on/ Turn off the 2nd LED, and call them in your while loop_)
+- You can use a breadboard to distribute the power source from the Raspberry Pi to the LEDs.
 
 ### Takeaways from this lab experiment
 
