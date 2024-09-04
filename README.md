@@ -10,9 +10,9 @@ In this lab, we will learn how to use a Raspberry Pi 5 to create a smart home vo
 3.	HDMI cable, microHDMI to HDMI adapter, and monitor
 4.	USB keyboard and mouse
 5.	MicroSD card (16GB or larger recommended), and MicroSD card Adapter
-6.  Relay Module
-7.  Two LEDs (different colors), a breadboard, and two current limiting resistors (anything between 270-1000 ohms)
-8. Lamp (Optional)
+6.	Relay Module
+7.	Two LEDs (different colors), a breadboard, and two current limiting resistors (anything between 270-1000 ohms)
+8.	Lamp (Optional)
 
 ## Software: 
 1.	The Latest Raspbian Operating System: Debian Bookwarm 64-bit with desktop environment
